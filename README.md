@@ -2,16 +2,15 @@
 
 (Plantilla de Proyecto) 
 
+## Creación Multimedia Interactiva (Fac. Bellas artes)
 
-Creación Multimedia Interactiva (Fac. Bellas artes)
-
-**Autor: ** 
+**Autor:** 
 
 **Título:** 
 
 **Resumen:**
 
-**Licencia: (creative Commons) **
+**Licencia: (creative Commons)**
 
 
 ### Memoria del proyecto:
