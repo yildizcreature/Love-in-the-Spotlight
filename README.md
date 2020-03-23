@@ -14,7 +14,9 @@ Creación Multimedia Interactiva (Fac. Bellas artes)
 **Licencia: (creative Commons) **
 
 
-**Memoria del proyecto:**   
+### Memoria del proyecto:
+
+
 
 
 
@@ -24,6 +26,8 @@ Creación Multimedia Interactiva (Fac. Bellas artes)
 
 
 ### comentarios
+
+Ejemplos de otros años: https://github.com/mgea/interart 
 
 Si queremos que el proyecto sea visible como página web, debemos renombra este respositorio (en *Settings*) y poner el siguiente nombre: XXXX.github.io  donde XXXX es tu nombre de usuario en github
 
