@@ -9,7 +9,7 @@ Creación Multimedia Interactiva (Fac. Bellas artes)
 
 **Título:** 
 
-**Resumen: **
+**Resumen:**
 
 **Licencia: (creative Commons) **
 
