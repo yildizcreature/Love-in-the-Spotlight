@@ -5,16 +5,21 @@
 
 Creación Multimedia Interactiva (Fac. Bellas artes)
 
-Autor: 
+**Autor: ** 
 
-Título: 
+**Título:** 
 
-Resumen: 
+**Resumen: **
 
-Licencia: (creative Commons) 
+**Licencia: (creative Commons) **
 
 
 **Memoria del proyecto:**   
+
+
+
+
+
 
 
 
@@ -29,4 +34,4 @@ La página web de Github se podrá visualizar con el siguiente enlace:  !(https:
 
 
 
-Miguel Gea, Febrero 2018 
+Febrero 2018 
