@@ -1,11 +1,28 @@
 # cmi.io
 
-## Proyecto de bellas artes del 2019
+(Plantilla de Proyecto) 
 
 
-Ejemplo de proyecto exportado en HTML a un repositorio de Github. (se debe llamar XXXX.github.io) donde XXXX es tu nombre en github
+Creación Multimedia Interactiva (Fac. Bellas artes)
 
-La página Github se puede visualizar con el siguiente enlace:  !(https://mgea.github.io/cmi) 
+Autor: 
+
+Título: 
+
+Resumen: 
+
+Licencia: (creative Commons) 
+
+
+**Memoria del proyecto:**   
+
+
+
+### comentarios
+
+Si queremos que el proyecto sea visible como página web, debemos renombra este respositorio (en *Settings*) y poner el siguiente nombre: XXXX.github.io  donde XXXX es tu nombre de usuario en github
+
+La página web de Github se podrá visualizar con el siguiente enlace:  !(https://XXXX.github.io) 
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CC-BY-SA-Andere_Wikis_%28v%29.svg/200px-CC-BY-SA-Andere_Wikis_%28v%29.svg.png)
