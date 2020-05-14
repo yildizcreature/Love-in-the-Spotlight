@@ -22,7 +22,6 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 (insertar imágenes a resolucion de 100px alto)
 
-
 **Resolución:** 800x600px responsivo/o tamaño fijo (indicar la que has aplicado, y si es reescalable)
 
 **Probado en:**   (indicar dónde has probado que funciona: ej. Google Chrome / MS Edge... /móviles android )
@@ -54,7 +53,6 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 ### 2.2. Esquema de navegación 
 
 
-![navegacion](https://github.com/mgea/cmi20/blob/master/Untitled%20Diagram%20(2).png) 
 
 (imagen con las distintas pantallas de navegación, usa draw.io o cualquier programa de dibujo)
 
@@ -119,6 +117,8 @@ Este  proyecto es interesante porque ...
 
 
 
+
+
 # 5 Referencias 
 
 **Artículos y blogs ** 
@@ -137,10 +137,9 @@ Este  proyecto es interesante porque ...
 - 
 
 
+
 (imagen de la licencia, copiar y pegar aquí la correcta)
+
 https://creativecommons.org/licenses/?lang=es
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CC-BY-SA-Andere_Wikis_%28v%29.svg/200px-CC-BY-SA-Andere_Wikis_%28v%29.svg.png)
 
 Mayo 2020
-
-
