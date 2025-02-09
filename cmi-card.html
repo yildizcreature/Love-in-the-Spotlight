@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="es">
+   
+<!------ Personal profile card CMI   ./cmi-card.html          ---->
+<!----- Creación Multimedia interactiva, BBAA UGR v 1.1 2025     ---->
+<!--- based on:                                                  ---->
+<!--- daliannyvieira Card                                        ---->
+<!-----      https://codepen.io/daliannyvieira/pen/QKKyJY        ---->
+<!--- pulse button: https://codepen.io/zephyr2050/pen/bGdVxwg    ---->
+<!-----  live: https://cmi-card.glitch.me/                       ---->
+<!-----  github: https://github.com/mgea/cmi/                    ---->
+<!------                                             ---------------->
+    
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Creacion Multimedia Interactiva" />
+<!-- font awesome with chalkboard plugin CDN            --->
+<!--- list fa icons: https://fontawesome.com/v4/icons/  --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite" rel="stylesheet">
+
+<style>
+/****** INcrustado hoja de estilos *******/
+
+body {
+  overflow: hidden;
+  background-size: cover;
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font: normal 14px/1.618em "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased; 
+}
+
+body:before {
+  content: "";
+  height: 0px;
+  padding: 0px;
+ /* border: 0em solid #bcdee7; */
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  z-index: 2;
+  display: block;
+  transform: translate(-50%, -50%);
+  animation: puff 1s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+/*  background: #bcdee7; */
+ 
+ 
+
+  background-size: cover;
+/*  background-color: #bcdee7;  */
+  background-blend-mode: soft-light;
+  background-image: url('./fondo.jpg');
+}
+
+h1,
+h2 {
+  
+  font-weight: 50px;
+  margin: 0px 0px 5px 0px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  margin: 0px;
+}
+
+.profile-card {
+  /* background: #f5f3f3; */
+  width: 450px;
+  height: 156px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 1;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  animation: init 1.5s 0.2s cubic-bezier(0.55, 0.055, 0.275, 0.19) forwards, materia 0.5s .9s cubic-bezier(0.86, 0, 0.07, 1) forwards; 
+}
+.profile-card header {
+  width:  270px; 
+  height: 280px;
+  
+  padding: 50px 0px 10px 0px;
+  display: inline-block;
+  float: none;
+  border-right: 2px dashed #EEEEEE;
+  background: #ffffff; 
+  margin-top: 50px;
+  opacity: 0;
+  text-align: center;
+  animation: moveIn 1s 1.5s ease forwards;
+}
+
+.profile-card header h1 {
+  /*** color nombre y logotipos ***/
+  color: #1c1c8F;  
+}
+
+.profile-card header a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin: -15px 20px;
+}
+
+.profile-card header a > img {
+  max-width: 100%;
+}
+
+.profile-card header a:after {
+  position: absolute;
+  content: "$500";
+  bottom: 3px;
+  right: 3px;
+  padding: 10px 5px;
+  border: 4px solid #FFFFFF;
+  transform: scale(0);
+  background: linear-gradient(#FF5722 0%, #FF5722 50%, #FF5722 50%, #FF5722 100%);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 1.3s 1.5s ease forwards;
+}
+
+.profile-card .profile-bio {
+  width: 45%;
+  height: 45%;
+  float: right;
+  padding: 50px 20px 30px 20px;
+  background: #FFFFFF;
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0;
+  animation: moveIn 1s 1s ease forwards;
+}
+
+    
+
+.list-unstyled {
+  margin-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.social-icons .fa {
+  font-size: 1.5em;
+  line-height: 0px;
+  text-align: center;
+  color: #3c3c3c;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons .fa:hover,
+.social-icons .fa:active {
+  font-size: 3em;
+  -webkit-box-shadow: 1px 1px 3px #333;
+  -moz-box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #333;
+}
+
+
+    
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 36px;
+    height: 36px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes materia {
+  0% {
+    background: #E0E0E0;
+  }
+  50% {
+    border-radius: 4px;
+    width: 500px;    /* new */
+    height: 300px;   /* new */
+  }
+  100% {
+    width: 600px;    /* original was 500 */
+    height: 400px;   /* original was 300 */
+    background: #FFFFFF;
+    opacity: 0.9;
+   
+    border-radius: 4px;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -20px;
+  }
+}
+
+
+/*******   mediaQuery ****************/
+
+@media screen and (max-width: 550px) {
+  .profile-card header {
+    width: auto;
+    height: auto;
+    padding: 45px 0 30px 0;
+    display: block;
+    float: none;
+    border-right: none;
+  }
+
+  .profile-card header a > img {
+    width: 250px;
+  }
+  
+  .profile-card .profile-bio {
+    width: auto;
+    height: auto;
+    padding: 0px 20px 10px 20px;
+    display: block;
+    float: none;
+  }
+
+  @keyframes materia {
+    0% {
+      background: #E0E0FF;
+    }
+    50% {
+      border-radius: 4px;
+    }
+    100% {
+      width: 90%;
+      height: 90%;
+      background: #FFFFFF;
+      border-radius: 4px;
+    }
+  }
+}
+
+/******* MOVIL  mediaQuery ****************/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  
+  .profile-card header {
+    width: auto;
+    height: auto;
+    padding: 15px 0 30px 0;
+    display: block;
+    
+    line-height: 1.4em;
+    font-size: 30px; 
+    border-right: none;
+  }
+
+  .profile-card header a > img {
+    width: 75%;
+  
+  }
+  
+  
+  .profile-bio  {
+  padding-top:30px;
+  line-height: 1.5em;
+  }
+  
+  h1 {
+  font-size: 48px;
+}
+
+    h2 {
+  font-size: 36px;
+}
+
+  .footer {
+    line-height: 1.2em;
+    
+    }
+
+  
+
+  .profile-card .profile-bio {
+    width: 80%;
+    height: auto;
+    font-size: 35px;
+    padding: 0px 20px 10px 20px;
+    display: block;
+    float: none;
+  }
+  
+
+
+
+  @keyframes materia {
+    0% {
+      background: #E0E0FF;
+    }
+    50% {
+      border-radius: 4px;
+    }
+    100% {
+      width: 90%;
+      height: 90%;
+      background: #FFFFFF;
+      border-radius: 4px;
+    }
+  }
+}
+
+  
+
+    
+/********* button *****/
+
+    
+.botondeproyecto {
+        margin-top: 30px;
+    }
+    
+    
+.button-pulse {
+ 
+  color: blue;
+  display: relative; 
+ 
+  margin-top: 50px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: 2px solid #fdbbaf;
+  border-radius: 100px;
+  padding: 10px 10px;
+  
+   animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0 0  #fdbbaf; /* #1F4141; */
+}
+    
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 8px rgba(250, 250, 250, 0); 
+  }
+}
+
+
+.footer {
+    display: block;
+
+    border-top:20px;
+    padding: 25px 25px 500px 0px;
+    
+    }
+
+.slide {
+
+  /* se puede poner fondo de la pantalla */ 
+  /* recursos: https://pixabay.com/es/images/search/abstracto/ */
+  background-image: url('https://cdn.pixabay.com/photo/2021/08/18/19/26/background-6556414_1280.jpg');
+    background-size:cover;
+}
+
+
+</style>
+</head>
+
+
+<!--------------------------------------------------------->
+<!---------------- CONTENIDO ------------------------------>
+<!--------------------------------------------------------->
+  
+  
+  
+<body class="slide"">
+
+    
+
+<!------------------ PROFILE CARD ------------------------>
+
+    
+<div class="profile-card "> 
+    <header>
+      <a><img src="https://cdn.pixabay.com/photo/2022/04/20/03/44/woman-7144194_1280.png"></a>
+        <!---- alt image https://cdn.pixabay.com/photo/2016/03/31/23/06/boy-1297397_1280.png --->
+      <h1>Joana Doe</h1>
+      <h2>Designer</h2>
+           
+     <br>
+      
+      <!--------- Redes sociales --------------> 
+      <span class="social-icons">   
+        <a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a>
+        <a href="https://github.com/mgea/interart" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </span>
+      
+     <!---- Iconos redes sociales 
+          Disponibles en:  https://fontawesome.com/v4/icons/  
+             <i class="fa fa-behance"></i>
+            <i class="fa fa-codepen"></i>
+            <i class="fa fa-github"></i>
+            <i class="fa fa-instagram">
+      --->
+   
+        
+         
+    </header>
+    <div class="profile-bio">
+      <p>Nombre de mi proyecto </p>
+       
+      <ul style="text-align:left">
+        <li>Descripción del proyecto</li>
+
+        <li>Hecho con: </li>
+        <li>Comentarios </li>
+          
+      </ul>
+   
+    
+        
+        <div class="botondeproyecto"> 
+     
+        <a href="./proyecto/index.html" target="_blank" class="button-pulse">Proyecto</a>
+        </div>
+    
+     <div class="footer">
+          <small>Creación Multimedia Interactiva </small><br>
+        <small> Facultad de Bellas Artes </small><br>
+         <small> Universidad de Granada, 2024 <br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/2560px-Cc-by-nc-sa_icon.svg.png" style="width: 80px"></small>
+      </div> 
+    
+    
+    </div>
+ 
+    </div>
+</body>
+    
+</html> 
