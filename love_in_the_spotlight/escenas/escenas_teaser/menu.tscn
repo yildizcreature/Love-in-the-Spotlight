@@ -1,0 +1,142 @@
+[gd_scene load_steps=22 format=3 uid="uid://ijsuc8i05ile"]
+
+[ext_resource type="Script" uid="uid://16m5th8mw14d" path="res://script/script_teaser/menu.gd" id="1_77urm"]
+[ext_resource type="Texture2D" uid="uid://qqojp6l6gusf" path="res://assets/assets_teaser/decorado.png" id="2_5pufm"]
+[ext_resource type="Texture2D" uid="uid://blf7f82txhp7o" path="res://assets/assets_teaser/love in the spotlight.png" id="3_r4k28"]
+[ext_resource type="Texture2D" uid="uid://0vou700lrley" path="res://assets/assets_teaser/cortina - superior.png" id="4_kc3vh"]
+[ext_resource type="FontFile" uid="uid://cffekw8e1k0cd" path="res://fuentes de texto/PlaywriteRO-Regular.ttf" id="5_i102f"]
+[ext_resource type="StyleBox" uid="uid://nw01dsdd73oo" path="res://estilos/botones_menu_hover.tres" id="6_ki6n6"]
+[ext_resource type="StyleBox" uid="uid://cteplwqgv26hp" path="res://estilos/botones_menu_pressed.tres" id="7_y3y64"]
+[ext_resource type="StyleBox" uid="uid://byu5x1g2i8smp" path="res://estilos/botones_menu_normal.tres" id="8_hr2li"]
+[ext_resource type="Script" uid="uid://evf4u070k3nw" path="res://script/script_teaser/galeria.gd" id="9_hd61s"]
+[ext_resource type="Script" uid="uid://cm3rwkb5ji5j2" path="res://script/script_teaser/creditos.gd" id="10_52thk"]
+[ext_resource type="Script" uid="uid://26h7qmeworbd" path="res://script/script_teaser/juego.gd" id="11_hpufm"]
+[ext_resource type="Texture2D" uid="uid://ccrijexdfavcy" path="res://assets/assets_teaser/sprite/estrellas (1).png" id="12_8o866"]
+[ext_resource type="Texture2D" uid="uid://bdrbx53tp1olw" path="res://assets/assets_teaser/sprite/estrellas (2).png" id="13_70lrf"]
+[ext_resource type="Texture2D" uid="uid://dhnq86m1ygjol" path="res://assets/assets_teaser/sprite/estrellas (3).png" id="14_dpole"]
+[ext_resource type="Texture2D" uid="uid://dlwk6xl45uv5u" path="res://assets/assets_teaser/sprite/estrellas.png" id="15_vmje5"]
+[ext_resource type="AudioStream" uid="uid://bl61po7y0hq03" path="res://audio/music_menu.mp3" id="16_5pufm"]
+[ext_resource type="PackedScene" uid="uid://dvtkqwqoavva1" path="res://escenas/h_slider.tscn" id="17_r4k28"]
+[ext_resource type="AudioStream" uid="uid://dtomckdqn71jt" path="res://audio/effect_button.MP3" id="18_kc3vh"]
+[ext_resource type="Texture2D" uid="uid://crwaf6l1c3h1" path="res://assets/Ilustración.png" id="19_i102f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yb3qj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8o866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_70lrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dpole")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vmje5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_kc3vh"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_77urm")
+
+[node name="Decorado" type="Sprite2D" parent="."]
+position = Vector2(576.006, 324)
+scale = Vector2(0.460882, 0.460882)
+texture = ExtResource("2_5pufm")
+
+[node name="LoveInTheSpotlight" type="Sprite2D" parent="."]
+position = Vector2(576, 319.942)
+scale = Vector2(0.4608, 0.4608)
+texture = ExtResource("3_r4k28")
+
+[node name="Cortina-Superior" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.4608, 0.460882)
+texture = ExtResource("4_kc3vh")
+
+[node name="Galeria" type="Button" parent="."]
+offset_left = 193.0
+offset_top = 451.0
+offset_right = 383.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0.321569, 0.180392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("5_i102f")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ki6n6")
+theme_override_styles/pressed = ExtResource("7_y3y64")
+theme_override_styles/normal = ExtResource("8_hr2li")
+text = "Galería"
+script = ExtResource("9_hd61s")
+
+[node name="Juego" type="Button" parent="."]
+offset_left = 481.0
+offset_top = 451.0
+offset_right = 671.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0.321569, 0.180392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("5_i102f")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ki6n6")
+theme_override_styles/pressed = ExtResource("7_y3y64")
+theme_override_styles/normal = ExtResource("8_hr2li")
+text = "Jugar"
+script = ExtResource("10_52thk")
+
+[node name="Creditos" type="Button" parent="."]
+offset_left = 769.0
+offset_top = 451.0
+offset_right = 959.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0.321569, 0.180392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("5_i102f")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ki6n6")
+theme_override_styles/pressed = ExtResource("7_y3y64")
+theme_override_styles/normal = ExtResource("8_hr2li")
+text = "Créditos"
+clip_text = true
+script = ExtResource("11_hpufm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.460882, 0.460882)
+sprite_frames = SubResource("SpriteFrames_yb3qj")
+frame_progress = 0.185543
+
+[node name="menu musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_5pufm")
+volume_db = -5.0
+autoplay = true
+bus = &"Musica"
+
+[node name="Volumen" parent="." instance=ExtResource("17_r4k28")]
+offset_left = 388.0
+offset_top = 560.0
+offset_right = 762.0
+offset_bottom = 589.0
+theme = SubResource("Theme_kc3vh")
+theme_override_styles/slider = ExtResource("8_hr2li")
+bus_name = "Musica"
+
+[node name="Botones" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_kc3vh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Ilustración" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("19_i102f")
+
+[connection signal="button_down" from="Galeria" to="." method="_on_galeria_button_down"]
+[connection signal="pressed" from="Galeria" to="." method="_on_galeria_pressed"]
+[connection signal="button_down" from="Juego" to="." method="_on_juego_button_down"]
+[connection signal="pressed" from="Juego" to="." method="_on_juego_pressed"]
+[connection signal="button_down" from="Creditos" to="." method="_on_creditos_button_down"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]

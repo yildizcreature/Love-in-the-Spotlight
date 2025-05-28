@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8h3w5uaw7bv0"]
+
+[ext_resource type="PackedScene" uid="uid://brrrhj2i8i8tx" path="res://escenas/minijuego/game_level.tscn" id="1_fupw2"]
+[ext_resource type="Texture2D" uid="uid://dcmin2cx357qj" path="res://assets/background_minijuego1.PNG" id="2_lu5r6"]
+[ext_resource type="Script" uid="uid://bs6lfik5stf1l" path="res://escenas/escenas_del_juego/minijuego_1.gd" id="2_oxujc"]
+[ext_resource type="Texture2D" uid="uid://crwaf6l1c3h1" path="res://assets/Ilustración.png" id="4_25qiw"]
+
+[node name="GameLevel" instance=ExtResource("1_fupw2")]
+script = ExtResource("2_oxujc")
+
+[node name="BackgroundMinijuego" type="Sprite2D" parent="." index="0"]
+position = Vector2(-1.90735e-05, -8.40425e-06)
+scale = Vector2(0.4608, 0.460882)
+texture = ExtResource("2_lu5r6")
+
+[node name="Ilustración" type="Sprite2D" parent="." index="9"]
+texture = ExtResource("4_25qiw")

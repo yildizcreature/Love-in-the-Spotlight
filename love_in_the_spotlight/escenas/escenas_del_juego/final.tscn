@@ -1,0 +1,136 @@
+[gd_scene load_steps=16 format=3 uid="uid://cov1pqhe76l6q"]
+
+[ext_resource type="Script" uid="uid://bv5mjb1dgtxn0" path="res://escenas/escenas_del_juego/final.gd" id="1_x0exr"]
+[ext_resource type="Texture2D" uid="uid://c36jhih68agq6" path="res://assets/assets_teaser/fondo - negro créditos.png" id="2_p6c60"]
+[ext_resource type="Texture2D" uid="uid://dccrtxjhxu1mk" path="res://escenas/escenas_teaser/final 1.PNG" id="3_eyw6n"]
+[ext_resource type="Texture2D" uid="uid://c5auiktcc26br" path="res://escenas/escenas_teaser/final 2.PNG" id="4_588hy"]
+[ext_resource type="Texture2D" uid="uid://blar2n0f3375o" path="res://escenas/escenas_teaser/final 3.PNG" id="5_mib5d"]
+[ext_resource type="Texture2D" uid="uid://crwaf6l1c3h1" path="res://assets/Ilustración.png" id="6_588hy"]
+[ext_resource type="FontFile" uid="uid://cffekw8e1k0cd" path="res://fuentes de texto/PlaywriteRO-Regular.ttf" id="7_wc6wf"]
+[ext_resource type="StyleBox" uid="uid://nw01dsdd73oo" path="res://estilos/botones_menu_hover.tres" id="8_eiya8"]
+[ext_resource type="StyleBox" uid="uid://cteplwqgv26hp" path="res://estilos/botones_menu_pressed.tres" id="9_gpeo4"]
+[ext_resource type="StyleBox" uid="uid://byu5x1g2i8smp" path="res://estilos/botones_menu_normal.tres" id="10_5qtwx"]
+[ext_resource type="Script" uid="uid://evf4u070k3nw" path="res://script/script_teaser/galeria.gd" id="11_vrouc"]
+
+[sub_resource type="Animation" id="Animation_ydtot"]
+resource_name = "Final"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Final1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, 985), Vector2(576, 324), Vector2(576, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, -324), Vector2(576, 324), Vector2(576, 324)]
+}
+
+[sub_resource type="Animation" id="Animation_x8q04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Final1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 985)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, -324)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eyw6n"]
+_data = {
+&"Final": SubResource("Animation_ydtot"),
+&"RESET": SubResource("Animation_x8q04")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eyw6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_588hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mib5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Final" type="Node2D"]
+script = ExtResource("1_x0exr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_eyw6n")
+}
+
+[node name="Fondo-NegroCréditos" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(576, 324)
+scale = Vector2(0.4608, 0.460882)
+texture = ExtResource("2_p6c60")
+
+[node name="Final1" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(576, 985)
+scale = Vector2(0.4608, 0.460882)
+texture = ExtResource("3_eyw6n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(576, -324)
+scale = Vector2(0.4608, 0.460882)
+sprite_frames = SubResource("SpriteFrames_eyw6n")
+frame_progress = 0.213934
+
+[node name="Ilustración" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(576, 324)
+texture = ExtResource("6_588hy")
+
+[node name="saltar" type="Button" parent="AnimationPlayer"]
+offset_left = 951.0
+offset_top = 561.0
+offset_right = 1128.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(0.321569, 0.180392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("7_wc6wf")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("8_eiya8")
+theme_override_styles/pressed = ExtResource("9_gpeo4")
+theme_override_styles/normal = ExtResource("10_5qtwx")
+text = "volver menú"
+script = ExtResource("11_vrouc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[connection signal="pressed" from="AnimationPlayer/saltar" to="." method="_on_saltar_pressed"]

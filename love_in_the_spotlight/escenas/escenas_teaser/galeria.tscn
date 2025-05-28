@@ -1,0 +1,169 @@
+[gd_scene load_steps=13 format=3 uid="uid://ckly0ua8d3rev"]
+
+[ext_resource type="VideoStream" uid="uid://hie0rofjg4c5" path="res://assets/assets_galeria/copy_F394F941-E742-4E2B-9E24-9F83685A6C58.ogv" id="1_cw8bs"]
+[ext_resource type="Texture2D" uid="uid://b78jasgtafvq2" path="res://assets/assets_galeria/Galeria_Alex.png" id="2_cw8bs"]
+[ext_resource type="Texture2D" uid="uid://dcwmiri4xble5" path="res://assets/botones/boton_atras_azul.png" id="4_cw8bs"]
+[ext_resource type="Texture2D" uid="uid://dugq85pciegqo" path="res://assets/botones/boton_siguiente_azul.png" id="5_5b31k"]
+[ext_resource type="Texture2D" uid="uid://dp4bkej0gipr2" path="res://assets/botones/boton_volver_azul.png" id="5_hp4hm"]
+[ext_resource type="Script" uid="uid://c16rsx0bln3jg" path="res://script/script_teaser/volver_menu.gd" id="6_cw8bs"]
+[ext_resource type="AudioStream" uid="uid://b7874fqmf1md2" path="res://audio/music_credits_galeria.mp3" id="8_5b31k"]
+[ext_resource type="Texture2D" uid="uid://crwaf6l1c3h1" path="res://assets/Ilustración.png" id="9_xfemi"]
+[ext_resource type="AudioStream" uid="uid://dtomckdqn71jt" path="res://audio/effect_button.MP3" id="9_yqdb2"]
+
+[sub_resource type="GDScript" id="GDScript_omctf"]
+script/source = "extends Node2D
+
+var elementos = [
+	\"res://assets/assets_galeria/Galeria_Alex.png\",
+	\"res://assets/assets_galeria/Galeria_Aslan.png\",
+	\"res://assets/assets_galeria/Galeria_Ella.png\",
+	\"res://assets/assets_galeria/copy_F394F941-E742-4E2B-9E24-9F83685A6C58.ogv\"
+	]
+
+
+var indice = 0
+
+
+func _on_atras_pressed():
+	indice -= 1
+	if indice < 0:
+		indice = elementos.size() - 1
+	mostrar_elemento()
+
+func _on_atras_button_down() -> void:
+	$Botones.play()
+
+func _on_siguiente_pressed() -> void:
+	indice += 1
+	if indice>= elementos.size():
+		indice = 0 #vuelve al primero
+	mostrar_elemento()
+
+func _on_siguiente_button_down() -> void:
+	$Botones.play()
+
+
+func _on_volver_menu_button_down() -> void:
+	$Botones.play()
+
+func mostrar_elemento():
+	var ruta = elementos[indice]
+	
+	if ruta.ends_with(\".ogv\"):
+		$TextureRect.visible = false
+		$VideoStreamPlayer.visible = true
+		$VideoStreamPlayer.stream = load(ruta)
+		$VideoStreamPlayer.play()
+	else:
+		$VideoStreamPlayer.visible = false
+		$VideoStreamPlayer.stop()
+		$TextureRect.visible = true
+		$TextureRect.texture = load(ruta)
+"
+
+[sub_resource type="GDScript" id="GDScript_cw8bs"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_5b31k"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="galeria" type="Node2D"]
+script = SubResource("GDScript_omctf")
+metadata/_edit_horizontal_guides_ = [559.0, 643.0, 580.0, 618.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("2_cw8bs")
+expand_mode = 1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_cw8bs")
+expand = true
+loop = true
+
+[node name="atras" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 570.0
+offset_right = 1014.0
+offset_bottom = 629.0
+icon = ExtResource("4_cw8bs")
+flat = true
+expand_icon = true
+script = SubResource("GDScript_cw8bs")
+
+[node name="siguiente" type="Button" parent="."]
+offset_left = 1025.0
+offset_top = 572.0
+offset_right = 1084.0
+offset_bottom = 626.0
+icon = ExtResource("5_5b31k")
+flat = true
+expand_icon = true
+script = SubResource("GDScript_5b31k")
+
+[node name="volver menu" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 574.0
+offset_right = 107.0
+offset_bottom = 626.0
+icon = ExtResource("5_hp4hm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_cw8bs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1005, 559)
+stream = ExtResource("8_5b31k")
+volume_db = -5.0
+autoplay = true
+bus = &"Musica"
+
+[node name="Botones" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1005, 559)
+stream = ExtResource("9_yqdb2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Ilustración" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("9_xfemi")
+
+[connection signal="button_down" from="atras" to="." method="_on_atras_button_down"]
+[connection signal="pressed" from="atras" to="." method="_on_atras_pressed"]
+[connection signal="button_down" from="siguiente" to="." method="_on_siguiente_button_down"]
+[connection signal="pressed" from="siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="button_down" from="volver menu" to="." method="_on_volver_menu_button_down"]
+[connection signal="pressed" from="volver menu" to="volver menu" method="_on_pressed"]
