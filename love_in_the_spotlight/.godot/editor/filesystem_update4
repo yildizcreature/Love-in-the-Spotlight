@@ -1,0 +1,10 @@
+res://escenas/escenas_del_juego/juego_escena_1.tscn
+res://dialogic/style.tres
+res://escenas/escenas_del_juego/minijuego1.tscn
+res://escenas/escenas_del_juego/juego_escena_2.tscn
+res://escenas/escenas_del_juego/final.tscn
+res://escenas/escenas_teaser/creditos.tscn
+res://escenas/escenas_teaser/teaser_ audiciones.tscn
+res://escenas/escenas_teaser/menu.tscn
+res://escenas/escenas_teaser/galeria.tscn
+res://escenas/escenas_del_juego/final.gd
