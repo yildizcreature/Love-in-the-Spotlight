@@ -141,6 +141,9 @@ Aunque no he podido llevar a cabo todo lo que tenía planeado, este proyecto me 
   - PlaywriteRO-Regular
   - ZillaSlab-Regular
 
+* Referencia script minijuego:
+  - Luis Armada: https://youtu.be/lhrqsUZ45j8?si=B375BIXFOS7vYXJq
+
 **Herramientas utilizadas**
 
 - Godot 4.4
