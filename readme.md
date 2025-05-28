@@ -20,7 +20,8 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 **Logotipo** 
 
-![love in the spotlight - logotipo](https://github.com/user-attachments/assets/d960d145-8ba8-49dd-9ada-91be3f72351a)
+![love in the spotlight - logotipo](https://github.com/user-attachments/assets/bad520ec-1609-424b-8199-92fea3282a5b)
+
 
 **Resolución:**
 
@@ -43,13 +44,14 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 ### 2.1 Storyboard: 
 
-![Untitled_Artwork](https://github.com/user-attachments/assets/667a2fb4-c5dc-4900-a338-eee3eede7ea8)
+![Untitled_Artwork](https://github.com/user-attachments/assets/d6d92bd4-d830-40c8-991c-9657854d5127)
+
 
 
 
 ### 2.2. Esquema de navegación 
 
-![esquema de navegación](https://github.com/user-attachments/assets/e46fb32c-5f97-4d8b-8d5f-3c5f3a87de53)
+![esquema de navegación](https://github.com/user-attachments/assets/f8b9d8ff-df94-4bd5-85d8-c604b1d17089)
 
 
 
