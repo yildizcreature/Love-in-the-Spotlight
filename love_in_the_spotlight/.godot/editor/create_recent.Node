@@ -1,0 +1,14 @@
+Button
+Camera2D
+AudioStreamPlayer2D
+AnimatedSprite2D
+AnimationPlayer
+Sprite2D
+AudioListener2D
+RichTextLabel
+CanvasLayer
+Timer
+VideoStreamPlayer
+TextureRect
+HSlider
+VBoxContainer
