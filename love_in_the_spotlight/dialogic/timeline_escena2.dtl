@@ -1,0 +1,18 @@
+[background arg="res://assets/fondo ensayos.PNG" fade="0.0"]
+(Estoy agotada tras practicar con mis compañeros.)
+join aslan center [animation="Fade In Up"]
+aslan: ¡Estupendo!, tenemos muy buen punto de partida. Solo queda seguir practicando.
+leave aslan [animation="Fade Out"]
+[background arg="res://assets/assets_teaser/fondo - negro créditos.png" fade="1.0" transition="Simple Fade"]
+(Los días pasan, llevamos semanas practicando las canciones del musical y estan empezando a lucir muy bien)
+(Debemos estar orgullosos de nuestro trabajo.)
+(...)
+(Es el final de curso, ha venido mucha gente a vernos...)
+join aslan left [animation="Fade In Up"]
+join ella right [animation="Fade In Up"]
+ella: Chicos, hemos trabajado mucho... ¡no olvideis pasarlo muy bien en el escenario!
+aslan: ¡Todo irá sobre ruedas!
+(Salimos todos los bailarines al escenario y todo fluye)
+(Hemos acabado el musical... ha ido todo genial)
+(estoy muy orgullosa de como ha salido)
+[signal arg="fin"]

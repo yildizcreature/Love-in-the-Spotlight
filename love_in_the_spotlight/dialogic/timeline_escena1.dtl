@@ -1,0 +1,43 @@
+[background arg="res://assets/fondo ensayos.PNG" fade="0.0"]
+join alex left [animation="Instant In" length="0.8" z_index="4"]
+(Hoy comienza un nuevo trimestre en el instituto. Es mi último trimestre como estudiante...)
+(Es por ello que debo aprovechar los últimos meses que me quedan)
+(Quería cambiar de aires, hacer algo nuevo; así que...)
+(¡Me he apuntado al club de teatro!)
+(Siempre me ha apasionado el teatro musical... broadway... las canciones, los escenarios, la emoción, las diversión...)
+(Pero nunca me había animado a participar en uno, sin embargo ¡todo lo que hay detrás de las bambalinas me parece tan divertido!, esta era mi última oportunidad de vivir mi pequeño sueño)
+(Así que aquí estoy, desbordada por los nervios por esta nueva aventura pero, al mismo tiempo, muy emocionada)
+(Siento un pequeño empujón en la espalda)
+join aslan right [animation="Slide In Right"]
+Ya se que el salón de grados suele impactar mucho cuando lo ves en este estado pero, por favor, no te quedes pasmada en mitad de la puerta.
+alex: Oh! perdona, no me había dado cuenta de que estaba en medio (El chico que tengo delante parece que ha venido corriendo, me pregunto a que vendrá tanta prisa.)
+alex: Me llamo Alex, soy nuevo en el club.
+aslan: Hhmm, ah, sí; hola, yo soy Aslan.
+(Aslan no me presta mucha más atención y se dirige con prisas al escenario, mientras que el resto de personas van llegando y sentandose en los asientos)
+leave aslan [animation="Slide Out Left"]
+(Me acerco a escuchar lo que los líderes del club deben decir.)
+leave alex [animation="Slide Out Right"]
+join aslan center [animation="Slide In Right"]
+aslan: Bienvenidos a todos a un nuevo trimestre. Este es el último para mucha gente del club así que ¡vamos a intentar cerrar el curso a lo grande!
+aslan: Estuvimos hablando con el departamento de literatura y ya tenemos la obra de teatro escogida; este trimestremestre vamos a actuar...
+aslan: ¡Wicked!
+leave aslan [animation="Fade Out"]
+join ella center [animation="Fade In"]
+(Tras escuchar el anuncio de la obra me percato que la chica sentada a mi lado le brillan mucho los ojos, llenos de ilusión)
+(Debe gustarle mucho el musical... seguro que tiene muchas ganas de actuar)
+leave ella [animation="Fade Out"]
+join aslan center [animation="Slide In Right"]
+aslan: Ahora voy a repartir los papeles a aquellas personas que audicionaron, por desgracia no todo el mundo podrá actuar pero esperamos que decidais quedaros para ayudar detrás del escenario.
+(Aslan empieza a repartir los guiones)
+(Vaya... parece que no tendré ocasión de actuar en el escenario en esta ocasión... que pena)
+(Pero no dejaré que esto me desanime, ¡ayudaré con la producción de la obra!)
+aslan: Vamos a necesitar mucha ayuda con este ambicioso proyecto pero si nos apoyamos entre todos podremos sacar adelante una obra grandiosa.
+aslan: Principalmente necesitaremos ayuda con la realización de decorados y las coreografías de las canciones, ¡cuento con vosotros!
+update aslan left
+join ella right [animation="Slide In Right"]
+aslan: Os presento a Ella, junto a mi coordina las coreografías, todos aquellos que querais ayudar hablad con nosotros.
+aslan: Ahora si que sí, ¡a trabajar!
+leave ella [animation="Fade Out"]
+leave aslan [animation="Fade Out"]
+¡Debería ayudar con la coreografía!
+[signal arg="fin"]
